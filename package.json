@@ -1,6 +1,6 @@
 {
   "name": "@ibaiyu/koishi-plugin-captcha",
-  "description": "新人入群/第一次添加好友时的人机验证",
+  "description": "新人入群时的人机验证",
   "version": "0.0.1",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -9,14 +9,14 @@
     "dist"
   ],
   "license": "MIT",
-  "scripts": {},
   "keywords": [
     "chatbot",
     "koishi",
     "plugin"
   ],
-  "devDependencies": {},
   "peerDependencies": {
-    "koishi": "^4.17.7"
+    "koishi": "^4.17.7",
+    "koishi-plugin-adapter-onebot": "*",
+    "koishi-plugin-cache-database": "^2.1.0"
   }
 }
