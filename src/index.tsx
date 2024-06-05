@@ -11,7 +11,6 @@ export const inject = {
 export interface Config {
   maxAge: number;
   // 白名单群号配置
-  guildIds: string[];
   attempts: number;
 }
 
@@ -50,10 +49,6 @@ export const Config: Schema<Config> = Schema.object({
     .description("最大尝试次数")
     .min(1)
     .max(9),
-  guildIds: Schema.array(String)
-    .description("只有添加在白名单的群号才会生效")
-    .role("table")
-    .default([]),
 });
 
 interface CaptchaCache {
@@ -70,13 +65,12 @@ export function apply(ctx: Context, config: Config) {
 
   ctx.on("guild-member-added", async (session: Session) => {
     const { userId, guildId, type } = session;
-    const { guildIds, maxAge, attempts } = config;
+    const { maxAge, attempts } = config;
 
     const a = Random.int(1, 100);
     const b = Random.int(1, 100);
 
-    if (guildIds.indexOf(guildId) === -1) return;
-    console.log(guildId, userId, type);
+    ctx.logger.info(guildId, userId, type);
 
     try {
       await session.send(
@@ -115,9 +109,7 @@ export function apply(ctx: Context, config: Config) {
     const { userId, guildId, messageId } = session;
     const message = session.event.message;
     const { content } = message;
-    const { guildIds, attempts } = config;
-
-    if (guildIds.indexOf(guildId) === -1) return;
+    const { attempts } = config;
 
     let captchaCache: CaptchaCache | undefined;
     try {
