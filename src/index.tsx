@@ -75,7 +75,7 @@ export function apply(ctx: Context, config: Config) {
     try {
       await session.send(
         <>
-          欢迎 <at id={userId} /> 加入本群！请完成验证群验证。
+          欢迎 <at id={userId} /> 加入本群！请完成群验证。
           <br />
           {a} + {b} = ?
           <br />
