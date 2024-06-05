@@ -4,6 +4,11 @@
   "version": "0.0.1",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
+  "private": false,
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "contributors": [
     "iBaiYu <1665169869@qq.com>"
   ],
