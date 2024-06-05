@@ -79,6 +79,8 @@ export function apply(ctx: Context, config: Config) {
           <br />
           {a} + {b} = ?
           <br />
+          有效期为：{(maxAge / 1000).toFixed(2)}秒，请在有效期内完成验证
+          <br />
           (tips: 你只有{attempts}次机会，超过{attempts}次将被移出本群)
         </>
       );
@@ -91,8 +93,7 @@ export function apply(ctx: Context, config: Config) {
           ctx.logger.info("验证码超时，移出群 " + userId);
           await session.send(
             <>
-              <at id={userId} />
-              验证超时，你已被移出本群
+              <at id={userId} /> 验证超时，你已被移出本群
             </>
           );
           session.onebot.setGroupKick(guildId, userId, false);
