@@ -93,12 +93,12 @@ export function apply(ctx: Context, config: Config) {
         attempts: 0,
         result: a + b,
         createdAt: Date.now(),
-        timerId: createTimer(() => {
+        timerId: createTimer(async () => {
           ctx.logger.info("验证码超时，移出群 " + userId);
-          session.send(
+          await session.send(
             <>
               <at id={userId} />
-              验证码超时，你已被移出本群
+              验证超时，你已被移出本群
             </>
           );
           session.onebot.setGroupKick(guildId, userId, false);
