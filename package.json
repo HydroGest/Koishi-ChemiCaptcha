@@ -4,6 +4,13 @@
   "version": "0.0.1",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
+  "contributors": [
+    "iBaiYu <1665169869@qq.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1665169869/koishi-plugin-captcha.git"
+  },
   "files": [
     "lib",
     "dist"
@@ -12,7 +19,8 @@
   "keywords": [
     "chatbot",
     "koishi",
-    "plugin"
+    "plugin",
+    "captcha"
   ],
   "peerDependencies": {
     "koishi": "^4.17.7",
