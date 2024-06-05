@@ -1,7 +1,7 @@
 {
   "name": "@ibaiyu/koishi-plugin-captcha",
   "description": "基于onebot的新人入群时的人机验证",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "private": false,
