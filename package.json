@@ -28,9 +28,11 @@
     "manage",
     "captcha"
   ],
-  "peerDependencies": {
-    "koishi": "^4.17.7",
+  "devDependencies": {
     "koishi-plugin-adapter-onebot": "*",
     "koishi-plugin-cache-database": "^2.1.0"
+  },
+  "peerDependencies": {
+    "koishi": "^4.17.7"
   }
 }
