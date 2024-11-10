@@ -154,11 +154,6 @@ export function apply(ctx: Context, config: Config) {
             `captcha:${userId}`
           );
 
-          if (isUndefined(captchaCache)) {
-            ctx.logger.info("验证码缓存不存在，跳过定时器" + userId);
-            return;
-          }
-
           ctx.logger.info("验证码超时，移出群 " + userId);
           await session.send(
             parseMsgToJSX(config.groupChatVerificationTimeoutMsg, { userId })
