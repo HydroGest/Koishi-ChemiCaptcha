@@ -62,18 +62,11 @@ export const Config: Schema<Config> = Schema.object({
 
 
 const FORMULAS = [
-    { formula: "H₂O", mass: 18 },       // 水
-    { formula: "CO₂", mass: 44 },       // 二氧化碳
-    { formula: "CH₄", mass: 16 },       // 甲烷
-    { formula: "NH₃", mass: 17 },       // 氨气
-    { formula: "O₂", mass: 32 },        // 氧气
-    { formula: "NaCl", mass: 58 },      // 氯化钠
     { formula: "C₁₂H₂₂O₁₁", mass: 342 }, // 蔗糖
     { formula: "H₂SO₄", mass: 98 },     // 硫酸
     { formula: "Fe₃O₄", mass: 232 },    // 四氧化三铁
     { formula: "CuO", mass: 80 },       // 氧化铜
     { formula: "Cu₂O", mass: 144 },     // 氧化亚铜
-
     { formula: "HCl", mass: 36 },       // 盐酸
     { formula: "HNO₃", mass: 63 },      // 硝酸
     { formula: "NaOH", mass: 40 },      // 氢氧化钠
@@ -103,6 +96,28 @@ const FORMULAS = [
     { formula: "C₃H₈", mass: 44 },      // 丙烷
     { formula: "C₄H₁₀", mass: 58 },     // 丁烷
     { formula: "HCN", mass: 27 },       // 氰化氢
+    { formula: "CuSO₄·5H₂O", mass: 250 },       // 五水硫酸铜
+    { formula: "KAl(SO₄)₂·12H₂O", mass: 474 },  // 十二水硫酸铝钾（明矾）
+    { formula: "(NH₄)₂Fe(SO₄)₂·6H₂O", mass: 392 }, // 六水硫酸亚铁铵（莫尔盐）
+    { formula: "AgNO₃", mass: 170 },            // 硝酸银
+    { formula: "KMnO₄", mass: 158 },            // 高锰酸钾
+    { formula: "K₂Cr₂O₇", mass: 294 },          // 重铬酸钾
+    { formula: "Na₂S₂O₃·5H₂O", mass: 248 },     // 五水硫代硫酸钠（海波）
+    { formula: "Fe₂(SO₄)₃", mass: 400 },        // 硫酸铁
+    { formula: "Na₂CO₃·10H₂O", mass: 286 },     // 十水碳酸钠（纯碱晶体）
+    { formula: "CaSO₄·2H₂O", mass: 172 },       // 二水硫酸钙（石膏）
+    { formula: "Al₂(SO₄)₃·18H₂O", mass: 666 },  // 十八水硫酸铝
+    { formula: "Na₃[Fe(CN)₆]", mass: 307 },     // 铁氰化钠（含配位结构）
+    { formula: "K₃[Fe(CN)₆]", mass: 329 },      // 铁氰化钾
+    { formula: "Na₂HPO₄·12H₂O", mass: 358 },    // 十二水磷酸氢二钠
+    { formula: "Ca₃(PO₄)₂", mass: 310 },        // 磷酸钙
+    { formula: "BaCO₃", mass: 197 },            // 碳酸钡
+    { formula: "PbSO₄", mass: 303 },            // 硫酸铅（铅蓄电池成分）
+    { formula: "Ag₂SO₄", mass: 312 },           // 硫酸银
+    { formula: "FeCO₃", mass: 116 },            // 碳酸亚铁
+    { formula: "Na₂SiO₃·9H₂O", mass: 284 },     // 九水硅酸钠（水玻璃）
+    { formula: "ZnSO₄·7H₂O", mass: 287 },       // 七水硫酸锌（皓矾）
+    { formula: "Na₂B₄O₇·10H₂O", mass: 382 }     // 十水四硼酸钠（硼砂）
 ];
 
 interface CaptchaCache {
