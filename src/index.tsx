@@ -252,7 +252,7 @@ export function apply(ctx: Context, config: Config) {
         )
             return;
 
-        if (captchaCache.result < Number(content) + 1 && captchaCache.result < Number(content) - 1) {
+        if (captchaCache.result < Number(content) + 1 && captchaCache.result > Number(content) - 1) {
             clearTimer(captchaCache.timerId);
             await session.send(
                 parseMsgToJSX(config.humanVerificationSuccessMessage, { userId })
