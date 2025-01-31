@@ -31,10 +31,10 @@ export const Config: Schema<Config> = Schema.object({
     groupNewMemberVerificationMessage: Schema.string()
         .role("textarea", { rows: [2, 10] })
         .description(
-            "新人入群提醒信息 使用{ @at }艾特新人<br> 可选变量: fomular: 化学式, vCodeExp: 验证码有效期, attempts: 剩余尝试次数"
+            "新人入群提醒信息 使用{ @at }艾特新人<br> 可选变量: formula: 化学式, vCodeExp: 验证码有效期, attempts: 剩余尝试次数"
         )
         .default(
-            "欢迎{ @at } 加入本群！请完成群验证。\n{ fomular } 的相对分子质量？ \n有效期为：{ vCodeExp } 秒，请在有效期内完成验证\n (tips: 你只有{ attempts }次机会，超过{ attempts }次将被移出本群)"
+            "欢迎{ @at } 加入本群！请完成群验证。\n{ formula } 的相对分子质量？ \n有效期为：{ vCodeExp } 秒，请在有效期内完成验证\n (tips: 你只有{ attempts }次机会，超过{ attempts }次将被移出本群)"
         ),
     groupChatVerificationTimeoutMsg: Schema.string()
         .role("textarea", { rows: [2, 10] })

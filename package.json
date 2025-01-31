@@ -1,6 +1,6 @@
 {
-  "name": "@ibaiyu/koishi-plugin-captcha",
-  "description": "基于onebot的新人入群时的人机验证",
+  "name": "koishi-plugin-chemical-captcha",
+  "description": "基于onebot的新人入群时的人机验证，但是化学分子质量。",
   "version": "1.1.1",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
